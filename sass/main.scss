@@ -13,29 +13,30 @@
 
 // components
 @import "components/global";
-@import "components/icons-material-design";
+
 @import "components/grid";
 @import "components/navbar";
-@import "components/fonts";
-@import "components/typography";
-@import "components/cards";
-@import "components/toast";
-@import "components/tabs";
-@import "components/tooltip";
+@import "components/fonts"; 
+@import "components/typography";   
 @import "components/buttons";
 @import "components/dropdown";
-@import "components/waves";
-@import "components/modal";
-@import "components/collapsible";
-@import "components/materialbox";
+@import "components/waves"; 
+@import "components/collapsible";  
 @import "components/form";
-@import "components/table_of_contents";
 @import "components/sideNav";
-@import "components/preloader"; 
-@import "components/slider";
-@import "components/date_picker/default.scss";
-@import "components/date_picker/default.date.scss";
-@import "components/date_picker/default.time.scss";  
+// @import "components/slider"; 
+@import "components/modal"; 
+// @import "components/materialbox"; 
+// @import "components/tabs";
+// @import "components/tooltip";
+// @import "components/cards"; 
+// @import "components/toast";
+// @import "components/preloader"; 
+// @import "components/table_of_contents";
+// @import "components/icons-material-design";
+// @import "components/date_picker/default.scss"; 
+// @import "components/date_picker/default.date.scss";
+// @import "components/date_picker/default.time.scss";  
 
 
 // Coustom Styles
@@ -66,13 +67,14 @@
 // Margins & Padding 
 .no-margin, .nomargin { margin: 0 !important; }
 .no-padding, .nopadding { padding: 0 !important; }
+.no-gut{margin: 0 !important; padding: 0 !important;}
 .padded { padding-top: 5em; padding-bottom: 5em; }
 .padded-top { padding-top: 5em; }
 .padded-bottom { padding-bottom: 5em; }
 
 .padded { 
 	padding-top: 5em; 
-	padding-bottom: 50em; 
+	padding-bottom: 5em; 
 	&.less { 
 		padding-top: 3em; 
 		padding-bottom: 3em;
@@ -90,12 +92,6 @@
 	&.tiny { 
 		padding-top: 1em;  
 	}	
-	&.flexslider-quote {
-		padding-top: 8em;
-	}
-	&.university {
-		padding-top: 2em;
-	}
 }
 .padded-bottom { 
 	padding-bottom: 5em; 
@@ -120,14 +116,14 @@
 }
 .margined-top { 
 	margin-top: 5em; 
-	&.less { 
+	&.less {  
 		margin-top: 3em; 
 	}
-	&.tiny { 
+	&.tiny {  
 		margin-top: 1em; 
-	}	
+	}	 
 }
-.margined-bottom {  
+.margined-bottom {   
 	margin-bottom: 5em; 
 	&.less { 
 		margin-bottom: 3em;
@@ -136,7 +132,6 @@
 		margin-bottom: 1em;
 	}	
 }
-
 
 // Positioning
 .f-l {float: left;}
@@ -154,17 +149,113 @@
 .bg-norepeat {
 	background-repeat: no-repeat;
 }
-
-
 .no-bullet {
 	list-style-type: none;
 }
 
+// Subnav
+.pk-holder{
+	height: 50px;
+	.pushKick{
+		z-index: 99;
+	}
+}
+
+// overlay achortag
+.special-a {
+	min-width: 100%;
+	min-height: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	color: $clear;
+}
+
+// Grid Hover Effect
+.grid-hov {
+	@include transition(1s);
+	@include transition-timing-function(ease);
+	&:hover {
+		@include transition(0.5s);
+		@include transition-timing-function(ease);
+		background-color: #a5be04;
+	}
+}
+
+
+// Swiper
+.slide-fix {
+	position: absolute;
+	z-index: 9;
+	height: 300px;
+	width: 95%;
+	pointer-events: auto;
+	top: 30%;
+	left: 0;
+}
+
+.slider-1{
+	height: 450px;
+	pointer-events: none;
+
+	.swiper-pagination {
+		right: 2% !important;
+		pointer-events: auto;
+
+		& .swiper-pagination-bullet {
+			margin: 30px 0 !important;
+			width: 15px;
+			height: 15px;
+			border-color: white;
+
+		}
+	}
+
+	.swiper-pagination-bullet-active{
+		opacity: 1;
+		background: white !important;
+	}
+}
+
+// Custom Button
+.btn{
+	color: $black;
+	background: $clear;
+	border: $black 1px solid;
+	@include transition(300ms);
+	&:hover{
+		@include transition(500ms);
+		background-color: $black;
+		color: white;
+		letter-spacing: 1px;
+
+	}
+}
+
+// Absolute Position Button
+.btn-hold{
+	.btn{
+		color: $black;
+		background: $clear;
+		border: $black 1px solid;
+		@include transition(300ms);
+		&:hover{
+			@include transition(500ms);
+			background-color: $black;
+			color: white;
+			letter-spacing: 1px;
+
+		}
+	}
+}
 
 /*******************
   Media Queires Classes
-*******************/
+  *******************/
 
-@media #{$large-and-up}{}
-@media #{$medium-and-up}{}
-@media #{$medium-and-down}{}
+  @media #{$large-and-up}{}
+  @media #{$medium-and-up}{}
+  @media #{$medium-and-down}{
+  	.bg-fixed {background-attachment: scroll;}
+  }
+  @media #{$super-small}{}

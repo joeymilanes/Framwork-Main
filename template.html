@@ -37,8 +37,11 @@
 
 
 	<!-- Main Stylesheet -->	
-	<link rel="stylesheet" href="/css/plugin/vendor.css">
-	<link rel="stylesheet" href="/css/main.css">
+	<!-- Plugins -->
+	<!-- <link rel="stylesheet" href="css/plugin/animate.min.css"> -->
+	<!-- <link rel="stylesheet" href="css/plugin/vertgrid.css"> -->
+	<!-- <link rel="stylesheet" href="css/plugin/swiper.min.css"> -->
+	<link rel="stylesheet" href="css/main.css">
 
 
 	<!-- Modifying Scripts -->
@@ -53,88 +56,82 @@
 	<!-- Insert Tracking Tag Here -->	
 
 </head>
-
 <body>
-	<div class="Wrap">
+<!-- Header -->
 		<header>
-			<!-- Put Logo, Nav, & Header Contents Here -->
-			<div class="row">
-				<div class="small-10 medium-4 columns">
-					<a class="Logo" href="/">
-						<img src="http://placehold.it/225x125" alt="">
-					</a>
-				</div>
-				<div class="small-2 medium-8 columns">
-					<!-- Main Navigation -->
-					<nav class="Main_nav hide-for-small">
-						INSERT MODULE NAV TAG HERE
-					</nav>
-					<!-- Responsive Menu Hamburger -->
-					 <div class="menu-toggle show-for-small">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>				
+			<div class="container">
+				<div class="row">
+					<div class="col s12 no-gut">
+						<nav>
+		   					 <div class="nav-wrapper teal">					  
+		   					 <a href="#" class="brand-logo left">Logo</a>
+		   					 <a href="#" class="button-collapse" data-activates="slide-out">
+		   					 <span></span>
+		   					 <span></span>
+		   					 <span></span>
+		   					 </a>
+							      <ul id="nav-mobile" class="right hide-on-med-and-down">
+							        <li><a href="sass.html">Sass</a></li>
+							        <li><a href="components.html">Components</a></li>
+							        <li><a href="javascript.html">JavaScript</a></li>	
+							      </ul>
+							       <ul id="slide-out" class="side-nav">
+								        <li><a href="sass.html">Sass</a></li>
+								        <li><a href="components.html">Components</a></li>
+								        <li><a href="javascript.html">Javascript</a></li>
+								        <li><a href="mobile.html">Mobile</a></li>
+	      						  </ul>
+		    				</div>
+	  					</nav>				
+					</div>
 				</div>
 			</div>
 		</header>
-
-		<section class="Page-Content">
-			<section class="homepage">
-				{tag_pagecontent}
-			</section>
-		</section>
-
-		<div class="push"></div>
-
-	</div><!-- Wrap End -->
-
-	<footer>
-		<p class="neutraLight text-brown">&copy; Copyright __TestCompany<script>document.write(new Date().getFullYear())</script></p>
-	</footer>
-
-	<!-- Responsive Menu Slideout (put this in a content holder)-->
-	<section class="menu-slideout">
-		<div class="row">
-			<div class="small-11 small-centered columns">
-				<div class="row">
-					<div class="small-9 columns">
-						<h4 class="uppercase text-red lexia text-left">Menu</h4>
-					</div>
-				</div>
-
-				<nav class="slideout">
-					<ul>
-						<li>
-							<a href="#"></a>
-							Item 1
-						</li>
-						<li>
-							<a href="#"></a>
-							Item 2
-						</li>
-						<li>
-							<a href="#"></a>
-							Item 3
-						</li>
-					</ul>
-					<!-- [INSERT MODULE MENU TAG HERE] -->
-				</nav>
-			</div>
+<!-- Page Content -->
+	<main>
+		<div class="container">
+			{tag_pagecontent}
+			
 		</div>
-	</section>
-
+	</main>
+<!-- Footer -->
+		<footer class="page-footer teal">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Footer Content</h5>
+                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright teal">
+            <div class="container">
+           <p class="neutraLight text-brown"> &copy; Copyright __TestCompany<script>document.write(new Date().getFullYear())</script></p>
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+          </div>
+        </footer>
 </body>
-
 	<!-- Libraries -->
-	<script src="/js/jquery-2.1.4.min.js"></script>
-	<script src="/js/lib/jquery-ui.min.js"></script>
-	<script src="/js/materialize.min.js"></script>
+	<!-- Jquery -->
+	<script src="js/jquery-2.1.4.min.js"></script>
+	<!-- Pulgins -->
+	<!-- <script src="js/plugin/wow-spec.js"></script> -->
+	<!-- <script src="js/plugin/wow.js"></script> -->
+	<!-- <script src="js/plugin/swiper.min.js"></script> -->
 
-
-	<!-- Main Script -->
-	<script src="/js/main.js"></script>
-	<script>
-</script>
-
+	<!-- Framework -->
+	<script src="js/materialize.min.js"></script>
+	
+	<!-- Main Custom Script -->
+	<script src="js/main.js"></script>
 </html>
